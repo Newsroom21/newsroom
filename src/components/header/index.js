@@ -1,9 +1,9 @@
 import React from "react";
 // import "../style.scss";
 // import "font-awesome/css/font-awesome.min.css";
-import newsLogo from "../../assets/newsLogo.png";
+// import newsLogo from "../../assets/newsLogo.png";
 // import DarkMode from "../../DarkMode";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 function Header() {
   // const weekday = [
@@ -34,6 +34,7 @@ function Header() {
       
       <div>
         <div id="secondHeader">
+          hiii
           {/* <div className="scrollmenu" style={{ textAlign: `center` }}>
             <NavLink to="/news/politics">Politics</NavLink>
             <NavLink to="/news/features">Features</NavLink>

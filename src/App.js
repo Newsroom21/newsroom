@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 // import Header from "./components/header";
-// import Header from "./components/header";
+import Header from "./components/header";
 
 function App() {
   const [allNewsData, setAllNewsData] = useState([]);
@@ -22,8 +22,8 @@ function App() {
 
   return (
     <>
-      {/* <BrowserRouter> */}
-        {/* <Header /> */}
+      <BrowserRouter>
+        <Header />
         <div>
           hi
           {/* <Suspense
@@ -80,7 +80,7 @@ function App() {
         </div>
         <div>{/* <NewsRoomComponent /> */}</div>
         <div>{/* <Footer /> */}</div>
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 }
