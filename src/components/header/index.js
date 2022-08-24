@@ -1,6 +1,6 @@
 import React from "react";
 // import "../style.scss";
-import "font-awesome/css/font-awesome.min.css";
+// import "font-awesome/css/font-awesome.min.css";
 import newsLogo from "../../assets/newsLogo.png";
 // import DarkMode from "../../DarkMode";
 import { NavLink } from "react-router-dom";
