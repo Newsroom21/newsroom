@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Header from "./components/header";
 // import Header from "./components/header";
 
 function App() {
@@ -21,18 +22,18 @@ function App() {
 
   return (
     <>
-      {/* <BrowserRouter> */}
-
-      <div>
-        hi
-        {/* <Suspense
+      <BrowserRouter>
+        <Header />
+        <div>
+          hi
+          {/* <Suspense
             fallback={
               <div>
                 <div>Loading...</div>
               </div>
             }
           > */}
-        {/* <Routes>
+          {/* <Routes>
             <Route
               path="/"
               element={<HomeComponent allNewsData={allNewsData} />}
@@ -75,10 +76,11 @@ function App() {
               element={<VideosComponent allNewsData={allNewsData} />}
             />
           </Routes> */}
-        {/* </Suspense> */}
-      </div>
-      <div>{/* <NewsRoomComponent /> */}</div>
-      <div>{/* <Footer /> */}</div>
+          {/* </Suspense> */}
+        </div>
+        <div>{/* <NewsRoomComponent /> */}</div>
+        <div>{/* <Footer /> */}</div>
+      </BrowserRouter>
     </>
   );
 }
