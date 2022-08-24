@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+// import { Routes, Route, BrowserRouter } from "react-router-dom";
 // import Header from "./components/header";
 
 function App() {
@@ -21,16 +21,16 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
 
         <div>
-          <Suspense
+          {/* <Suspense
             fallback={
               <div>
                 <div>Loading...</div>
               </div>
             }
-          >
+          > */}
             {/* <Routes>
             <Route
               path="/"
@@ -74,11 +74,10 @@ function App() {
               element={<VideosComponent allNewsData={allNewsData} />}
             />
           </Routes> */}
-          </Suspense>
+          {/* </Suspense> */}
         </div>
         <div>{/* <NewsRoomComponent /> */}</div>
         <div>{/* <Footer /> */}</div>
-      </BrowserRouter>
     </>
   );
 }
