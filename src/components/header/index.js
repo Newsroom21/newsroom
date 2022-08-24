@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.scss";
+// import "../style.scss";
 import "font-awesome/css/font-awesome.min.css";
 import newsLogo from "../../assets/newsLogo.png";
 // import DarkMode from "../../DarkMode";
