@@ -24,6 +24,7 @@ function App() {
       {/* <BrowserRouter> */}
 
         <div>
+          hi
           {/* <Suspense
             fallback={
               <div>
