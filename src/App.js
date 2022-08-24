@@ -1,11 +1,56 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
-import axios from "axios";
-import { BrowserRouter } from "react-router-dom";
-// import Header from "./components/header";
+import React, { Suspense, useEffect, useState } from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Header from "./components/header";
+import axios from "axios";
+import Footer from "./components/footer";
+import Lottie from "react-lottie";
+import loaderData from "./components/loader.json";
+
+const HomeComponent = React.lazy(() => import("./components/home-component"));
+const SelectedNews = React.lazy(() => import("./components/selected-news"));
+const TopStoryComponent = React.lazy(() =>
+  import("./components/top-story-component")
+);
+const NewsRoomComponent = React.lazy(() =>
+  import("./components/newsroom-component")
+);
+const PoliticsComponent = React.lazy(() =>
+  import("./components/PoliticsComponent")
+);
+const FeaturesComponent = React.lazy(() =>
+  import("./components/FeaturesComponent")
+);
+const CourtRoomComponent = React.lazy(() =>
+  import("./components/CourtRoomComponent")
+);
+const UnTNComponent = React.lazy(() => import("./components/UnTNComponent"));
+const EnvironmentComponent = React.lazy(() =>
+  import("./components/EnvironmentComponent")
+);
+const ReportsComponent = React.lazy(() =>
+  import("./components/ReportsComponent")
+);
+const ColumnsComponent = React.lazy(() =>
+  import("./components/ColumnsComponent")
+);
+const VideosComponent = React.lazy(() =>
+  import("./components/VideosComponent")
+);
+
+const override = `
+  display: block;
+  margin: 0 auto;
+`;
 
 function App() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loaderData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   const [allNewsData, setAllNewsData] = useState([]);
   const url = "https://newsroom-backend.herokuapp.com/newsPortal";
   const WAIT_TIME = 500;
@@ -13,6 +58,16 @@ function App() {
   useEffect(() => {
     const id = setInterval(() => {
       axios.get(url).then((response) => {
+        // for (let i = 0; i < response.data.newsPortal.length; i++) {
+        //   var dateobj = new Date(response.data.newsPortal[i].updatedAt);
+        //   var dateobj1 = new Date(response.data.newsPortal[i].createdAt);
+
+        //   var B = moment(dateobj).format("LLL");
+        //   var B1 = moment(dateobj1).format("LLL");
+
+        //   response.data.newsPortal[i].updatedAt = B;
+        //   response.data.newsPortal[i].createdAt = B1;
+        // }
         response.data.newsPortal.reverse();
         setAllNewsData(response.data.newsPortal);
       });
@@ -21,19 +76,25 @@ function App() {
   }, [allNewsData]);
 
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <div>
-          hi
-          {/* <Suspense
-            fallback={
+    <BrowserRouter>
+      <Header />
+
+      <div>
+        <Suspense
+          fallback={
+            <div>
               <div>
-                <div>Loading...</div>
+                <Lottie
+                  options={defaultOptions}
+                  height={100}
+                  width={100}
+                  css={override}
+                />
               </div>
-            }
-          > */}
-          {/* <Routes>
+            </div>
+          }
+        >
+          <Routes>
             <Route
               path="/"
               element={<HomeComponent allNewsData={allNewsData} />}
@@ -75,14 +136,16 @@ function App() {
               path="/news/videos"
               element={<VideosComponent allNewsData={allNewsData} />}
             />
-          </Routes> */}
-          {/* </Suspense> */}
-        </div>
-        <div>{/* <NewsRoomComponent /> */}</div>
-        <div>{/* <Footer /> */}</div>
-      </BrowserRouter>
-    </>
+          </Routes>
+        </Suspense>
+      </div>
+      <div>
+        <NewsRoomComponent />
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
-
 export default App;
