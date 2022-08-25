@@ -15,7 +15,7 @@ const HomeComponent = (props) => {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 3000,
+    speed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -53,7 +53,7 @@ const HomeComponent = (props) => {
   };
 
   const renderSlides = () =>
-    newsPost.map((newsPost) => (
+    newsPost.slice(0, 5).map((newsPost) => (
       <div
         key={newsPost._id}
         onClick={() => navigateNews(`/news/${newsPost.newsId}`)}
