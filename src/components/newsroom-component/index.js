@@ -14,7 +14,8 @@ const NewsRoomComponent = () => {
                 <div className="newsroomTitle">My Account</div>
                 <div style={{ marginTop: `20px` }}>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -22,7 +23,8 @@ const NewsRoomComponent = () => {
                     </a>
                   </div>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -30,7 +32,8 @@ const NewsRoomComponent = () => {
                     </a>
                   </div>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -43,7 +46,8 @@ const NewsRoomComponent = () => {
                 <div className="newsroomTitle">Connect with us</div>
                 <div style={{ marginTop: `20px` }}>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -51,7 +55,8 @@ const NewsRoomComponent = () => {
                     </a>
                   </div>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -59,7 +64,8 @@ const NewsRoomComponent = () => {
                     </a>
                   </div>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -67,7 +73,8 @@ const NewsRoomComponent = () => {
                     </a>
                   </div>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -80,7 +87,8 @@ const NewsRoomComponent = () => {
                 <div className="newsroomTitle">About us</div>
                 <div style={{ marginTop: `20px` }}>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -88,7 +96,8 @@ const NewsRoomComponent = () => {
                     </a>
                   </div>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -96,7 +105,8 @@ const NewsRoomComponent = () => {
                     </a>
                   </div>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -104,7 +114,8 @@ const NewsRoomComponent = () => {
                     </a>
                   </div>
                   <div className="newsroomPara">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href="https://www.w3schools.com/html/default.asp"
                       target="_blank"
                     >
@@ -116,7 +127,7 @@ const NewsRoomComponent = () => {
               <div>
                 <div className="newsroomTitle">Contact us</div>
                 <div style={{ marginTop: `20px` }}>
-                  <div className="newsroomPara">thenewsroom21@gmail.com</div>
+                  <div className="newsroomPara">editor@thenewsroom.live</div>
                 </div>
               </div>
             </div>
